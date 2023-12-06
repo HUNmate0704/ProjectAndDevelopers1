@@ -17,7 +17,8 @@ namespace ProjectAndDevelopers1
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\devs.mdf;Integrated Security=True;MultipleActiveResultSets=True") ; //connection String
+            //optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\devs.mdf;Integrated Security=True;MultipleActiveResultSets=True") ; //connection String
+            optionsBuilder.UseInMemoryDatabase("db");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
