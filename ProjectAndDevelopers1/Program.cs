@@ -10,6 +10,7 @@ namespace ProjectAndDevelopers1
             ProjectDbContext db = new ProjectDbContext();
             var devs = db.Developers.ToArray();
             var proj = db.Projects.ToArray();
+
             ;
         }
     }
